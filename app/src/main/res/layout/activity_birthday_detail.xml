@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.birthdayDetail.BirthdayDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navyblue"
+        android:theme="@style/DetailPageToolbar"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollViewDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/major_major"
+                >
+
+                <FrameLayout
+                    android:id="@+id/frameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="144dp"
+                    android:background="@color/navyblue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivDetailAvatar"
+                    android:layout_width="@dimen/list_card_image"
+                    android:layout_height="@dimen/list_card_image"
+                    android:layout_gravity="center_horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/CircularImageView"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewMainInfo"
+                    style="@style/BirthdayCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/major_major"
+                    android:layout_marginTop="@dimen/major_margin"
+                    android:layout_marginEnd="@dimen/major_major"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivDetailAvatar">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/mini_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvDetailName"
+                            style="@style/TextAppearance.MaterialComponents.Headline6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            tools:text="Samad" />
+
+                        <TextView
+                            android:id="@+id/tvDetailPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            tools:text="0816666666" />
+
+                        <TextView
+                            android:id="@+id/tvDetailEmail"
+                            style="@style/TextAppearance.MaterialComponents.Body2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            tools:text="email@email.com" />
+
+                        <TextView
+                            android:id="@+id/tvDetailDate"
+                            style="@style/TextAppearance.MaterialComponents.Body1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            tools:text="9th December, 2020" />
+
+                        <TextView
+                            android:id="@+id/tvDetailAge"
+                            style="@style/TextAppearance.MaterialComponents.Caption"
+                            android:textColor="@color/navyblue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            tools:text="24 years 5 months 5 days" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewBirthdayMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/major_margin"
+                    android:layout_marginTop="@dimen/major_margin"
+                    android:layout_marginEnd="@dimen/major_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewMainInfo">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/minor_margin"
+                        android:layout_marginTop="@dimen/mini_margin"
+                        android:layout_marginEnd="@dimen/minor_margin"
+                        android:layout_marginBottom="@dimen/mini_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/DetailHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/mini_margin"
+                            android:text="@string/birthday_message" />
+
+                        <TextView
+                            android:id="@+id/tvDetailMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:text="@string/lorem" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/major_margin"
+                    android:layout_marginTop="@dimen/major_margin"
+                    android:layout_marginEnd="@dimen/major_margin"
+                    android:layout_marginBottom="@dimen/major_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cardViewBirthdayMessage">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/minor_margin"
+                        android:layout_marginTop="@dimen/mini_margin"
+                        android:layout_marginEnd="@dimen/minor_margin"
+                        android:layout_marginBottom="@dimen/mini_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/DetailHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/mini_margin"
+                            android:text="@string/notes" />
+
+                        <TextView
+                            android:id="@+id/tvDetailNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:text="@string/lorem" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressBarDetail"
+            android:layout_width="@dimen/loading_width"
+            android:layout_height="@dimen/loading_width"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fabEdit"
+            style="@style/editFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="@dimen/minor_margin"
+            android:layout_marginBottom="@dimen/major_margin"
+            android:contentDescription="@string/edit_birthday"
+            android:text="@string/edit_birthday"
+            app:icon="@drawable/ic_edit"
+            app:iconGravity="start" />
+
+    </FrameLayout>
+
+</LinearLayout>

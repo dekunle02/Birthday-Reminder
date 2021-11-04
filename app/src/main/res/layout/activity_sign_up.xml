@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.signup.SignUpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="start"
+            style="@style/AppBarText"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSignUp"
+        style="@style/BirthdayCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/major_margin"
+        android:padding="@dimen/minor_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSignUp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/minor_margin"
+            android:orientation="vertical"
+            android:padding="@dimen/minor_margin">
+
+            <TextView
+                android:id="@+id/textViewSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/major_margin"
+                android:gravity="center"
+                android:text="@string/create_an_account"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textSize="@dimen/h6" />
+
+
+            <EditText
+                android:id="@+id/editTextNameSignUp"
+                style="@style/AuthEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginEnd="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:ems="10"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEmailSignUp"
+                style="@style/AuthEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginEnd="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:ems="10"
+                android:hint="@string/email_caps"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/editTextPasswordSignUp"
+                style="@style/AuthEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginEnd="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:ems="10"
+                android:hint="@string/password_caps"
+                android:inputType="textPassword" />
+
+
+            <EditText
+                android:id="@+id/editTextPassword2SignUp"
+                style="@style/AuthEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginEnd="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:ems="10"
+                android:hint="@string/confirm_password"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tvPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/minor_margin"
+                android:gravity="center"
+                android:text="@string/sign_up_policy_warning"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingView"
+        android:layout_width="@dimen/loading_width"
+        android:layout_height="@dimen/loading_width"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/cardViewSignUp"
+        app:layout_constraintStart_toStartOf="@id/cardViewSignUp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardViewSignUp"
+        app:layout_constraintEnd_toEndOf="@+id/cardViewSignUp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+    <Button
+        android:id="@+id/buttonSignUp"
+        style="@style/ContinueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/major_margin"
+        android:layout_marginTop="@dimen/major_margin"
+        android:layout_marginEnd="@dimen/major_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewSignUp" />
+
+    <Button
+        android:id="@+id/buttonGoogleSignUp"
+        style="@style/GoogleButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/major_margin"
+        android:layout_marginTop="@dimen/minor_margin"
+        android:layout_marginEnd="@dimen/major_margin"
+        android:text="@string/sign_in_with_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignUp" />
+
+    <Button
+        android:id="@+id/buttonOldUser"
+        style="@style/AlternateSignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoogleSignUp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mini_mini">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/birthdayColor"
+            android:layout_width="@dimen/minor_mini_margin"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/mini_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/card_7" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivItemAvatar"
+            android:layout_width="@dimen/list_card_image"
+            android:layout_height="@dimen/list_card_image"
+            android:layout_margin="@dimen/mini_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/birthdayColor"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mini_margin"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivItemAvatar"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/birthdayNameItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="Zainab" />
+
+            <TextView
+                android:id="@+id/birthdayDateItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:layout_editor_absoluteY="131dp"
+                tools:text="Jan 1, 2020" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

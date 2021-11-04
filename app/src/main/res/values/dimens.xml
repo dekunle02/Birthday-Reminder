@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="major_major">64dp</dimen>
+    <dimen name="major_margin">32dp</dimen>
+    <dimen name="minor_margin">16dp</dimen>
+    <dimen name="minor_mini_margin">12dp</dimen>
+    <dimen name="mini_margin">8dp</dimen>
+    <dimen name="mini_mini">4dp</dimen>
+
+    <dimen name="loading_width">48dp</dimen>
+    <dimen name="animation_display_width">96dp</dimen>
+
+    <dimen name="card_corner_radius">8dp</dimen>
+    <dimen name="recent_birthday_card_height">224dp</dimen>
+    <dimen name="recent_birthday_card_width">128dp</dimen>
+
+    <dimen name="list_card_image">72dp</dimen>
+
+    <dimen name="h5">24sp</dimen>
+    <dimen name="h6">20sp</dimen>
+    <dimen name="bodytext">16sp</dimen>
+    <dimen name="subtext">14sp</dimen>
+    <dimen name="minitext">12sp</dimen>
+
+</resources>

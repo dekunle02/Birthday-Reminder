@@ -1,0 +1,62 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory app:title="@string/general_header">
+
+<!--        <EditTextPreference-->
+<!--            app:key="signature"-->
+<!--            app:title="@string/signature_title"-->
+<!--            app:useSimpleSummaryProvider="true" />-->
+
+        <ListPreference
+            app:defaultValue="off"
+            app:entries="@array/night_mode_entries"
+            app:entryValues="@array/night_mode_values"
+            app:key="nightMode"
+            app:enabled="false"
+            app:title="@string/night_mode"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/notifcation_header">
+
+        <SwitchPreferenceCompat
+            app:key="allNotifications"
+            app:title="@string/all_notification_title"
+            app:defaultValue="true"/>
+
+
+        <SwitchPreferenceCompat
+            app:dependency="allNotifications"
+            app:key="dayNotifications"
+            app:defaultValue="true"
+            android:title="Birthday Notifications"
+            android:summary= "@string/day_notification_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="allNotifications"
+            app:key="dayBeforeNotifications"
+            app:defaultValue="true"
+            android:title="Day Before Notifications"
+            android:summary="@string/day_before_notification_title" />
+
+
+        <SwitchPreferenceCompat
+            app:dependency="allNotifications"
+            app:key="monthlyNotifications"
+            app:defaultValue="true"
+            android:title="Monthly notifications"
+            android:summary="@string/monthly_notification_title"
+            />
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:dependency="sync"-->
+<!--            app:key="attachment"-->
+<!--            app:summaryOff="@string/attachment_summary_off"-->
+<!--            app:summaryOn="@string/attachment_summary_on"-->
+<!--            app:title="@string/attachment_title" />-->
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.signin.SignInActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="@dimen/animation_display_width"
+        android:layout_height="@dimen/animation_display_width"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSignIn"
+        app:srcCompat="@drawable/app_stroke_logo" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/major_margin"
+        android:padding="@dimen/minor_margin"
+        style="@style/BirthdayCardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewLogo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/major_margin"
+            android:padding="@dimen/minor_margin"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/editTextEmailSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginEnd="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/minor_margin"
+                style="@style/AuthEditText"
+                android:hint="@string/email_caps"
+                android:inputType="textEmailAddress"
+                android:autofillHints="emailAddress" />
+
+            <EditText
+                android:id="@+id/editTextPasswordSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginEnd="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:hint="@string/password_caps"
+                style="@style/AuthEditText"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mini_margin"
+                android:layout_marginStart="@dimen/minor_margin"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:gravity="start"
+                android:text="@string/forgot_password"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/loadingView"
+                android:layout_width="@dimen/loading_width"
+                android:layout_height="@dimen/loading_width"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loading"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/buttonSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/major_margin"
+        android:layout_marginEnd="@dimen/major_margin"
+        android:layout_marginTop="@dimen/major_margin"
+        style="@style/ContinueButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewSignIn" />
+
+
+
+    <Button
+        android:id="@+id/buttonGoogleSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/major_margin"
+        android:layout_marginEnd="@dimen/major_margin"
+        android:layout_marginTop="@dimen/minor_margin"
+        android:text="@string/sign_in_with_google"
+        style="@style/GoogleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
+
+    <Button
+        android:id="@+id/buttonNewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/AlternateSignInButton"
+        android:text="@string/don_t_have_an_account"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGoogleSignIn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

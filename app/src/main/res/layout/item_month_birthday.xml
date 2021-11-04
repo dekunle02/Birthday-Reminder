@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/mini_mini">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivMonthBirthdayColor"
+            android:layout_width="@dimen/mini_mini"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/mini_mini"
+            tools:background="@color/card_7" />
+
+
+        <TextView
+            android:id="@+id/tvMonthDay"
+            android:layout_width="0px"
+            android:layout_weight="15"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/minor_margin"
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            android:textColor="@color/navyblue"
+            android:textSize="32sp"
+            tools:text="31" />
+
+        <TextView
+            android:id="@+id/tvMonthBirthdayName"
+            android:layout_width="0pt"
+            android:layout_weight="80"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+            tools:text="Nafisah" />
+    </LinearLayout>
+
+</FrameLayout>

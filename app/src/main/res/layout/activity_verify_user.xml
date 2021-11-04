@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.VerifyUserActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAuthenticate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewAuthenticate"
+        style="@style/BirthdayCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/major_margin"
+        android:padding="@dimen/minor_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarAuthenticate">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/minor_margin"
+            android:orientation="vertical"
+            android:padding="@dimen/minor_margin">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieMail"
+                android:layout_width="@dimen/animation_display_width"
+                android:layout_height="@dimen/animation_display_width"
+                android:layout_marginBottom="@dimen/mini_margin"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/mail" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/major_margin"
+                android:gravity="center"
+                android:text="@string/authenticate_message"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonAuthenticate"
+        style="@style/ButtonStyle"
+        android:text="@string/send_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/major_margin"
+        android:layout_marginTop="@dimen/major_margin"
+        android:layout_marginEnd="@dimen/major_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewAuthenticate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

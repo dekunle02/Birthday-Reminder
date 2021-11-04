@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.adeleke.samad.birthdayreminder.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.adeleke.samad.birthdayreminder.ui.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
+
+    <fragment
+        android:id="@+id/birthdayListFragment"
+        android:name="com.adeleke.samad.birthdayreminder.ui.birthdayList.BirthdayListFragment"
+        android:label="birthday_list_fragment"
+        tools:layout="@layout/birthday_list_fragment" />
+
+</navigation>

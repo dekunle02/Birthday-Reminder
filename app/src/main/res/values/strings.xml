@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">BirthdayReminder</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas quis eros eget enim bibendum cursus. Vestibulum interdum dolor quis dui pulvinar auctor. Vestibulum interdum rutrum ultricies. Nunc sed hendrerit arcu. Cras sagittis, risus placerat tristique dictum, massa sapien porttitor mi, ut gravida justo erat a odio. Vivamus tincidunt sem sed consequat fringilla. Aliquam at ante ut dui congue sagittis. Quisque iaculis, odio sed mattis bibendum, quam magna finibus nisl, ut suscipit diam neque sed ex. Mauris feugiat, augue commodo consectetur semper, felis ante volutpat massa, quis mollis ante ligula ac ipsum. Praesent sit amet dignissim dui.
+
+Nam lobortis diam dolor, a sollicitudin orci ullamcorper vitae. Cras porta magna quis dui porta eleifend. Maecenas ut aliquam magna. Donec massa eros, aliquam ac urna sit amet, tempus scelerisque libero. Morbi quis faucibus tellus, et convallis leo. Morbi elit tortor, bibendum porttitor interdum eget, ultrices sed ex. Nulla a iaculis turpis, vitae molestie libero. Donec id libero quis mauris vehicula pretium non non urna.
+</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="email_caps">EMAIL</string>
+    <string name="password_caps">PASSWORD</string>
+    <string name="sign_in_with_google">Sign In with google</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="create_an_account">Create an Account</string>
+    <string name="first_name">FIRST NAME</string>
+    <string name="confirm_password">CONFIRM PASSWORD</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="sign_up_policy_warning">By creating an account you agree to our Terms of Service and Privacy Policy</string>
+    <string name="list">List</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="forgot_password_alert_body">Please enter the email associated with your account</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset_password_alert_body">Please enter your new password</string>
+    <string name="resend">Resend</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="send_email">SEND EMAIL</string>
+    <string name="enter_valid_email">Please enter a valid email</string>
+    <string name="enter_valid_name">Please enter a name with at least 2 characters</string>
+    <string name="enter_valid_password">Passwords must be at least 6 characters long</string>
+    <string name="email_sent">Email has been sent.</string>
+    <string name="send_again">SEND AGAIN</string>
+    <string name="authenticate_message">Please follow the link sent to your email to verify your account.</string>
+    <string name="verification_sent">Verification email sent successfully.</string>
+    <string name="verification_error">Error sending verification email.</string>
+    <string name="password_updated">Password Updated.</string>
+    <string name="password_updated_failed">Error updating password</string>
+    <string name="archived">Archived</string>
+    <string name="favorites">Favorites</string>
+    <string name="sort_by_date">Sort by Date</string>
+    <string name="sort_by_name">Sort by Name</string>
+    <string name="search">Search</string>
+    <string name="all_birthdays">All Birthdays</string>
+    <string name="add_new_birthday">add new birthday</string>
+    <string name="empty_birthday_list">Nothing to see here..</string>
+    <string name="birthday_message">Birthday Message</string>
+    <string name="notes">Notes</string>
+    <string name="edit_birthday">Edit birthday</string>
+    <string name="no_message_set">No message has been set…</string>
+    <string name="no_notes_set">No notes added yet …</string>
+    <string name="favorite">Favorite</string>
+    <string name="delete">Delete</string>
+    <string name="archive">Archive</string>
+    <string name="share">Share</string>
+    <string name="delete_prompt">Delete Birthday permanently?</string>
+    <string name="archive_prompt">Archive Birthday?</string>
+    <string name="unarchive">Un-Archive</string>
+    <string name="save">SAVE</string>
+    <string name="import_contact">Import Contact</string>
+    <string name="email_hint">Email</string>
+    <string name="name_hint">Name</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="date_hint">Date</string>
+    <string name="no">No</string>
+    <string name="import_text">Import</string>
+    <string name="import_contact_body">Would you like to create a new Birthday by importing an existing contact?</string>
+    <string name="decline">Decline</string>
+    <string name="accept">Accept</string>
+    <string name="discard_prompt">Any changes made will not be saved</string>
+    <string name="discard">Discard</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="add_a_birthday">Add a birthday to get started</string>
+    <string name="settings">Settings</string>
+    <string name="change_password">Change Password</string>
+    <string name="privacy_policy_head">Privacy policy</string>
+    <string name="about_head">About</string>
+    <string name="log_out">Log out</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="done">Done</string>
+    <string name="change_name_head">Change Display Name</string>
+    <string name="general_header">General</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="all_notification_title">Enable Notifications</string>
+    <string name="notifcation_header">Notifications</string>
+
+    <string name="monthly_notification_title">Show birthdays for the month at the start of the month</string>
+    <string name="day_before_notification_title">Show reminder for birthdays the previous day</string>
+    <string name="day_notification_title">Show reminder for birthdays on the birthday</string>
+    <string name="notification_channel_description">Notification from BirthdayReminder</string>
+    <string name="send">Send a message</string>
+</resources>

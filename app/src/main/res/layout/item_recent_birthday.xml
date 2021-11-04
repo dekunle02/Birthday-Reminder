@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/recent_birthday_card_width"
+    android:layout_height="@dimen/recent_birthday_card_height"
+    android:layout_margin="@dimen/mini_mini">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/mini_mini"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivRecentAvatar"
+            android:layout_width="@dimen/list_card_image"
+            android:layout_height="@dimen/list_card_image"
+            android:layout_margin="@dimen/mini_margin"
+            android:layout_gravity="center"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvRecentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/minor_margin"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            tools:text="Zainab" />
+
+        <TextView
+            android:id="@+id/tvRecentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/minor_margin"
+            android:layout_gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:layout_editor_absoluteY="131dp"
+            tools:text="Jan 1, 2020" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

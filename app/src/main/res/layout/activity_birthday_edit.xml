@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.birthdayEdit.BirthdayEditActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/alEdit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbEdit"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollViewEdit"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alEdit">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/minor_margin"
+            android:layout_marginEnd="@dimen/minor_margin"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/major_margin">
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivEditAvatar"
+                android:layout_width="@dimen/list_card_image"
+                android:layout_height="@dimen/list_card_image"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/major_margin"
+                android:backgroundTint="@color/teal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CircularImageView"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEditName"
+                style="@style/EditBirthdayTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_hint"
+                app:endIconContentDescription="@string/email_hint"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_person">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text|textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEditPhone"
+                style="@style/EditBirthdayTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_hint"
+                app:endIconContentDescription="@string/phone_hint"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_phone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEditEmail"
+                style="@style/EditBirthdayTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email_hint"
+                app:endIconContentDescription="@string/email_hint"
+                app:errorEnabled="true"
+                app:startIconDrawable="@drawable/ic_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEditDate"
+                style="@style/EditBirthdayTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/date_hint"
+                app:endIconContentDescription="@string/date_hint"
+                app:startIconDrawable="@drawable/ic_gift">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <DatePicker
+                android:id="@+id/editDatePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:theme="@style/Theme.AppCompat.DayNight"
+                android:yearListSelectorColor="@color/navyblue" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEditMessage"
+                style="@style/EditBirthdayTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/minor_margin"
+                android:hint="@string/birthday_message"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/messageEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="top"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textMultiLine"
+                    android:lines="50"
+                    tools:text="@string/lorem" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tfEditNote"
+                style="@style/EditBirthdayTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/notes">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/noteEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:gravity="top"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textMultiLine"
+                    android:lines="50"
+                    tools:text="@string/lorem" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progressBarEdit"
+        android:layout_width="@dimen/loading_width"
+        android:layout_height="@dimen/loading_width"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

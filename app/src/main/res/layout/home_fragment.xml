@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbHome"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/HomePageToolbar"
+        app:menu="@menu/home_menu"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/svHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/minor_mini_margin"
+                android:paddingBottom="@dimen/major_margin">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/homeHeaderCard"
+                    style="@style/BirthdayCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/minor_margin"
+                    android:layout_marginEnd="@dimen/minor_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/mini_mini"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvHomeTodayCount"
+                                style="@style/TextAppearance.MaterialComponents.Headline3"
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:text="1"
+                                android:textAlignment="center"
+                                android:textColor="@color/teal" />
+
+                            <TextView
+                                android:id="@+id/tvHomeMonthCount"
+                                style="@style/TextAppearance.MaterialComponents.Headline3"
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:text="3"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:id="@+id/tvHomeYearCount"
+                                style="@style/TextAppearance.MaterialComponents.Headline3"
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:text="14"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/mini_mini"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:text="Today"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:text="This Month"
+                                android:textAlignment="center" />
+
+                            <TextView
+                                android:layout_width="0pt"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="100"
+                                android:text="This Year"
+                                android:textAlignment="center" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvRecentHeader"
+                    style="@style/DetailHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/major_margin"
+                    android:layout_marginTop="@dimen/major_margin"
+                    android:layout_marginEnd="@dimen/major_margin"
+                    android:text="UPCOMING BIRTHDAYS"
+                    app:layout_constraintTop_toBottomOf="@+id/homeHeaderCard" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRecent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/minor_margin"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvRecentHeader"
+                    tools:listitem="@layout/item_recent_birthday" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/calendarCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/minor_margin"
+                    android:layout_marginTop="@dimen/minor_margin"
+                    android:layout_marginEnd="@dimen/minor_margin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rvRecent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                            android:id="@+id/calendarView"
+                            android:layout_width="match_parent"
+                            android:layout_height="360dp"
+                            android:layout_margin="@dimen/mini_mini"
+                            app:mcv_selectionMode="none"
+                            app:mcv_showOtherDates="none" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            tools:listitem="@layout/item_month_birthday" />
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progressBarHome"
+            android:layout_width="@dimen/loading_width"
+            android:layout_height="@dimen/loading_width"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/emptyHome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/animation_display_width"
+                android:layout_height="@dimen/animation_display_width"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/tvNothingToSee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="false"
+                app:lottie_rawRes="@raw/empty" />
+
+            <TextView
+                android:id="@+id/tvNothingToSee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/minor_margin"
+                android:text="@string/empty_birthday_list"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/darkgrey"
+                app:layout_constraintBottom_toTopOf="@id/btnHomeAdd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHomeAdd"
+                style="@style/otherButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/minor_margin"
+                android:text="@string/add_a_birthday"
+                app:icon="@drawable/ic_gift"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

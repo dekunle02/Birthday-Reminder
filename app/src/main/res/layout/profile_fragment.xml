@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tbProfile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvProfileInfo"
+        android:layout_width="match_parent"
+        style="@style/BirthdayCardView"
+        android:layout_marginTop="@dimen/minor_margin"
+        app:layout_constraintTop_toBottomOf="@id/tbProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/minor_margin"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/minor_margin"
+        android:layout_marginStart="@dimen/minor_margin"
+        >
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivUserAvatar"
+            android:layout_width="@dimen/animation_display_width"
+            android:layout_height="@dimen/animation_display_width"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/mini_margin"
+            android:src="@drawable/ic_person"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            app:layout_constraintTop_toBottomOf="@id/tbProfile" />
+
+        <TextView
+            android:id="@+id/tvProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_margin="@dimen/mini_margin"
+            tools:text="Samad Adeleke"
+            android:layout_gravity="end|bottom" />
+
+
+        <ImageButton
+            android:id="@+id/btnChangeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_edit"
+            android:backgroundTint="@color/navyblue"
+            android:layout_margin="@dimen/mini_margin"
+            android:layout_gravity="end|top"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/major_margin"
+        android:layout_marginTop="@dimen/major_margin"
+        android:layout_marginEnd="@dimen/major_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/BirthdayCardView"
+        app:layout_constraintTop_toBottomOf="@+id/cvProfileInfo">
+
+        <LinearLayout
+            android:id="@+id/ProfileSettings"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/minor_margin"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfileSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_settings"
+                style="@style/ProfilePageButton"
+                app:iconGravity="start"
+                android:text="@string/settings"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfilePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_lock"
+                style="@style/ProfilePageButton"
+                app:iconGravity="start"
+                android:text="@string/change_password"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfilePrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_privacy_policy"
+                style="@style/ProfilePageButton"
+                app:iconGravity="start"
+                android:text="@string/privacy_policy_head"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfileAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_info"
+                style="@style/ProfilePageButton"
+                app:iconGravity="start"
+                android:text="@string/about_head"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnProfileLogOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/ic_logout"
+                style="@style/ProfilePageButton"
+                android:text="@string/log_out"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
